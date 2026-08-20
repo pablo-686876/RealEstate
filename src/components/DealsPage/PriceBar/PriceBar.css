@@ -1,0 +1,117 @@
+.PriceBar {
+  height: 30%;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  padding: clamp(0.3125rem, 0.0446rem + 1.3393vw, 1.25rem);
+  /* max-height: 240px; */
+}
+
+.PriceBarPriceMax,
+.PriceBarPriceMin,
+.PriceBarPriceAverage {
+  font-size: clamp(0.75rem, 0.3929rem + 1.7857vw, 2rem);
+  align-self: center;
+}
+
+.PriceBarTextMax,
+.PriceBarTextMin,
+.PriceBarTextAverage {
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  align-self: center;
+}
+
+.PriceBarPriceMax {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.PriceBarTextMax {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.PriceBarPriceMin {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.PriceBarTextMin {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.PriceBarPriceAverage {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.PriceBarTextAverage {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.PriceBarCrossLine {
+  height: calc(clamp(3.75rem, 3.3929rem + 1.7857vw, 5rem) * 0.6);
+  width: clamp(0.0625rem, 0.0179rem + 0.2232vw, 0.125rem);
+  background-color: var(--main-font-color);
+  grid-column: 3;
+  grid-row: 1/-1;
+  align-self: center;
+}
+
+@media (width > 768px) {
+  .PriceBar {
+    width: 50%;
+    height: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .PriceBarTextMax,
+  .PriceBarTextMin {
+    text-align: right;
+    /* align-self: start; */
+  }
+
+  .PriceBarPriceMax,
+  .PriceBarPriceMin {
+    text-align: left;
+    /* align-self: start; */
+  }
+
+  .PriceBarTextMax {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .PriceBarTextMin {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .PriceBarPriceAverage {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: left;
+    /* align-self: end; */
+  }
+
+  .PriceBarTextAverage {
+    grid-column: 3;
+    grid-row: 3;
+    text-align: right;
+    /* align-self: end; */
+  }
+
+  .PriceBarCrossLine {
+    height: 2px;
+    width: 100%;
+    background-color: var(--main-font-color);
+    grid-column: 1/4;
+    grid-row: 2;
+    align-self: end;
+  }
+}

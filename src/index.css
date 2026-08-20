@@ -1,0 +1,69 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: var(--font-main-weight);
+  color: var(--main-font-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: underline;
+  color: var(--second-text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+body,
+div,
+section {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+button:focus,
+button:active,
+button:hover {
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.accent {
+  color: var(--accent-color);
+}

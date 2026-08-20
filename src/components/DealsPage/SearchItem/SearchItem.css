@@ -1,0 +1,76 @@
+.searchItem {
+  height: clamp(7.5rem, 6.4286rem + 5.3571vw, 11.25rem);
+  background-color: var(--bg-accent-color);
+  border-radius: 20px;
+  border: 2px solid var(--accent-color);
+  position: relative;
+  text-align: left;
+  padding: clamp(0.9375rem, 0.8482rem + 0.4464vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.searchItemPrice {
+  font-size: clamp(1.25rem, 0.75rem + 2.5vw, 3rem);
+  font-weight: 500;
+}
+
+.searchItemAddress,
+.searchItemLink {
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  color: var(--second-text-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.UpMark,
+.DownMark {
+  width: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  height: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  aspect-ratio: 1;
+  border-radius: 50px;
+  display: block;
+  position: absolute;
+  top: clamp(0.9375rem, 0.8482rem + 0.4464vw, 1.25rem);
+  right: clamp(0.9375rem, 0.8482rem + 0.4464vw, 1.25rem);
+}
+
+.UpMark svg,
+.DownMark svg {
+  width: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  height: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+}
+
+.DownMark {
+  background-color: var(--button-high-color);
+}
+
+.UpMark {
+  background-color: var(--button-low-color);
+}
+
+.searchItemIcon {
+  width: clamp(1.125rem, 1rem + 0.625vw, 1.5625rem);
+  height: clamp(1.125rem, 1rem + 0.625vw, 1.5625rem);
+  display: block;
+
+}
+
+.searchItemIcon svg {
+  height: 100%;
+}
+
+.searchItemText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.searchItemClicked {
+  border-color: var(--section-border-color);
+}

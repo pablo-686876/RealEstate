@@ -1,0 +1,33 @@
+.contentSectionMain {
+  background-color: var(--bg-accent-color);
+  border-radius: 20px;
+  padding: clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem);
+}
+
+.contentSectionMainTitle,
+.contentSectionSecondText,
+.contentSectionSecondTitle {
+  text-align: left;
+  font-weight: var(--font-accent-weight);
+}
+
+.contentSectionMainTitle {
+  padding-bottom: clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem);
+  font-size: clamp(1.5rem, 1rem + 2.2222vw, 3rem);
+}
+
+.contentSectionSecondText {
+  font-size: clamp(0.75rem, 0.5rem + 1.1111vw, 1.5rem);
+  padding-top: 20px;
+  color: var(--second-text-color);
+}
+
+.contentSectionSecondTitle {
+  line-height: 1em;
+  padding-top: clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem);
+  font-size: clamp(1.25rem, 0.6667rem + 2.5926vw, 3rem);
+}
+
+.accent {
+  color: var(--accent-color);
+}

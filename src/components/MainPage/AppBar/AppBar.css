@@ -1,0 +1,131 @@
+.appBar {
+  width: 100%;
+  height: 7%;
+  max-height: 80px;
+  background-color: var(--bg-accent-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 clamp(0.625rem, -0.2679rem + 4.4643vw, 3.75rem);
+  align-items: center;
+}
+
+.appBarOpen {
+  z-index: 1000;
+}
+
+.appBarButtonList {
+  display: flex;
+  gap: 20px;
+}
+
+.appBarKreditBalance {
+  font-size: clamp(1.125rem, 0.6964rem + 0.8929vw, 1.5rem);
+}
+
+.appBarActions {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  align-items: center;
+}
+
+.appBarButton {
+  color: var(--main-font-color);
+  border-radius: 10px;
+  height: 32px;
+  align-items: center;
+  min-width: 50px;
+  padding: 0 10px;
+  font-size: clamp(1rem, 0.7143rem + 0.5952vw, 1.25rem);
+}
+
+.appBarButtonLogout {
+  padding-left: 20px;
+}
+
+.appBarTitle {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
+}
+
+.burgerButton {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burgerButton span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--main-font-color);
+  transition: all 0.3s ease;
+}
+
+.mobileMenuPanel {
+  height: 7%;
+  border-top: 1px solid var(--main-font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-accent-color);
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.mobileMenuPanel.open {
+  transform: translateY(0);
+}
+
+.mobileMenuContainer {
+  position: fixed;
+  top: 7%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (width < 768px) {
+  .appBarButtonList {
+    gap: 10px;
+  }
+
+  .appBarButton {
+    font-size: clamp(0.75rem, 0.5714rem + 0.8929vw, 1rem);
+    height: clamp(1.5625rem, 1.25rem + 1.5625vw, 2rem);
+    min-width: 40px;
+    padding: 0 8px;
+  }
+
+  .appBarButtonLogout {
+    padding-left: 0;
+  }
+
+  .appBarKreditBalance {
+    font-size: clamp(0.75rem, 0.4821rem + 1.3393vw, 1.125rem);
+  }
+
+  .appBarActions {
+    justify-content: end;
+  }
+}

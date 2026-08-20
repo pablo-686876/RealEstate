@@ -1,0 +1,50 @@
+.searchFieldInput {
+  background-color: var(--bg-dark-accent-color);
+  border-radius: 30px;
+  height: clamp(2.5rem, 2.0833rem + 1.8519vw, 3.75rem);
+  width: 100%;
+  font-size: 16px;
+  color: var(--second-text-color);
+  padding: 0 45px 0 15px;
+  border: var(--section-border-color) 2px solid;
+  outline: none;
+  transition: border-color 0.25s;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.875rem, 0.7917rem + 0.3704vw, 1.125rem);
+}
+
+.searchFieldInput:-webkit-autofill,
+.searchFieldInput:-webkit-autofill:focus,
+.searchFieldInput:-webkit-autofill:hover,
+.searchFieldInput:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: var(--second-text-color) !important;
+  box-shadow: 0 0 0 1000px var(--bg-dark-accent-color) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.searchFieldInput:focus {
+  caret-color: var(--second-text-color);
+}
+
+.searchButton {
+  position: absolute;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-self: center;
+}
+
+.searchFieldInput:focus,
+.searchFieldInput:focus-visible {
+  border-color: #b6b6b6;
+}
+
+.searchField {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}

@@ -1,0 +1,70 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.main {
+  padding: 0 clamp(1.25rem, 0.4167rem + 3.7037vw, 3.75rem);
+  position: relative;
+}
+
+.dealsHeader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 50%;
+  height: 40%;
+  right: 0;
+  left: 0;
+  padding: 0 clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.Statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  margin-top: 10px;
+}
+
+@media (width > 768px) {
+  .Statistics {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+  .dealsHeader {
+    justify-content: space-around;
+  }
+}
+
+@media (orientation: portrait) and (width > 768px) {
+  .dealsHeader {
+    height: 30%;
+    bottom: 60%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-border-color);
+}
